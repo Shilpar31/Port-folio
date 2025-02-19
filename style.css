@@ -193,6 +193,21 @@ section h2 {
 #skills {
     background-color: #F4F4F4; /* Light Gray */
     color: #34495E;
+    overflow: hidden; /* Hide content outside of the container */
+    padding: 20px 0;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .skills img {
@@ -205,6 +220,15 @@ section h2 {
     transform: scale(1.2);
 }
 
+/* Keyframes for marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
 /* Projects Section */
 #projects {
     background-color: #F4F4F4; /* Light Gray */
