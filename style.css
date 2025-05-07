@@ -393,3 +393,16 @@ section h2 {
 #certifications a {
     text-decoration: none;
 }
+#volunteering {
+    margin-top: 40px;
+}
+
+#volunteering ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#volunteering li {
+    margin-bottom: 15px;
+}
+
