@@ -1,95 +1,359 @@
-/* Reset and base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* General styling */
 body {
-  background-color: #000000; /* solid black background */
-  color: #e6e6e6; /* light gray text globally */
-  line-height: 1.6;
-  min-height: 100vh;
-  padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* solid black background */
+    color: #e0e0e0; /* lighter text on black */
 }
 
-/* Container and layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Navbar */
+nav {
+    background-color: #1a1a1a; /* very dark gray, nearly black */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* subtle white shadow */
+    padding: 15px 0;
+    margin-bottom: 20px;
 }
 
-/* Sections with white transparent glass */
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color: #aaaaaa;
+}
+
+/* Section General Styles */
 section {
-  background: rgba(255, 255, 255, 0.15); /* white transparent glass */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.07);
-  padding: 40px;
-  margin-bottom: 30px;
-  color: #111111; /* dark text inside sections for contrast */
-  transition: background 0.3s ease;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.12); /* white transparent glass */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #111111; /* dark text inside sections */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Headings */
-h1, h2, h3 {
-  color: #111111;
-  margin-bottom: 20px;
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
 }
 
-/* Paragraphs */
-p {
-  margin-bottom: 20px;
-  color: #222222;
-  font-size: 1rem;
+/* About Section */
+#about {
+    background: rgba(255, 255, 255, 0.12);
+    color: #111111;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
-/* Links */
-a {
-  color: #111111;
-  text-decoration: underline;
-  transition: color 0.3s ease;
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
-a:hover {
-  color: #555555;
+.about-left {
+    flex: 1;
 }
 
-/* Buttons */
-button, .btn {
-  background: rgba(255, 255, 255, 0.25);
-  color: #111111;
-  border-radius: 24px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 12px 28px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+.about-right {
+    flex: 1;
+    text-align: center;
 }
 
-button:hover, .btn:hover {
-  background: rgba(255, 255, 255, 0.4);
+.about-right h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222222;
 }
 
-/* Layout helpers */
-.flex {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.about-right .typing-effect {
+    font-size: 20px;
+    font-weight: 300;
+    border-right: 2px solid #222;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite, hide-cursor 1s 4s forwards;
+    margin-bottom: 20px;
 }
 
-.flex-center {
-  justify-content: center;
-  align-items: center;
+/* Image styling */
+.about-left img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Education Section */
+#education {
+    background: rgba(255, 255, 255, 0.12);
+    color: #111111;
+}
+
+/* Education items */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    color: #111111;
+}
+
+.education-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Skills Section */
+#skills {
+    background: rgba(255, 255, 255, 0.12);
+    color: #111111;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.skills img {
+    width: 60px;
+    margin: 15px;
+    transition: transform 0.3s;
+}
+
+.skills img:hover {
+    transform: scale(1.2);
+}
+
+/* Projects Section */
+#projects {
+    background: rgba(255, 255, 255, 0.12);
+    color: #111111;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #111111;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    padding: 0 15px 15px;
+}
+
+/* Certifications & Publications Section */
+#certifications, #publications {
+    background: rgba(255, 255, 255, 0.12);
+    color: #111111;
+}
+
+#certifications li, #publications li {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Section */
+#contact {
+    background: rgba(255, 255, 255, 0.12);
+    text-align: center;
+    color: #111111;
+}
+
+#contact a {
+    margin: 15px;
+}
+
+#contact img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Scroll animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  section {
-    padding: 25px;
-  }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Button Styling */
+.about-right .btn {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #111111;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.about-right .btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Change size of Font Awesome icons */
+.fa-solid, .fa-brands {
+    font-size: 30px;
+    color: #e0e0e0;
+}
+
+/* Button Style for Certificates */
+.btn-certification {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #111111;
+    text-decoration: none;
+    padding: 5px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-certification:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-certification:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Style for list items */
+#certifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#certifications li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#certifications li b {
+    font-weight: bold;
+}
+
+#certifications a {
+    text-decoration: none;
+    color: #111111;
+}
+
+#volunteering {
+    margin-top: 40px;
+}
+
+#volunteering ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#volunteering li {
+    margin-bottom: 15px;
 }
