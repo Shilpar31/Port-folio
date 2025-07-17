@@ -86,12 +86,12 @@ section:hover {
 }
 
 .about-right {
-    text-align: left;
-    max-width: 600px;
-    color: #eee;  /* keep text visible */
+    text-align: justify;
+    color: #eee;
     font-size: 1rem;
-    line-height: 1.5;
-    margin-top: 0; /* no extra margin needed */
+    line-height: 1.6;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about-right h2 {
