@@ -1,141 +1,176 @@
-/* === Global and Reset === */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background: radial-gradient(ellipse at center, #0a0a23 0%, #000000 100%);
-  color: #e0e0e0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background:
+    radial-gradient(circle at center, #0f141f 0%, #05060a 90%);
+  color: #e5e5e5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.55;
+  overflow-x: hidden;
 }
 
 /* === Container === */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
 }
 
-/* === Glassmorphism Base for All Sections and Cards === */
+/* === Glass Panels === */
 section,
 .project-card,
 .education-item,
 .experience-card,
 #certifications li,
 #publications li {
-  background: rgba(255, 255, 255, 0.06);         /* Transparent white */
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  padding: 1.8rem 2rem;
-  margin-bottom: 2.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.85),
+    inset 0 0 50px 5px rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover effect for cards and sections */
+/* subtle highlight shine effect on hover */
 section:hover,
 .project-card:hover,
 .experience-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
+  box-shadow:
+    0 15px 40px 0 rgba(0, 0, 0, 0.9),
+    inset 0 0 80px 10px rgba(255, 255, 255, 0.12);
+  transform: translateY(-8px);
 }
 
-/* === Headings === */
+/* === Typography === */
 h1, h2, h3, h4 {
-  color: #ffffff;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
-}
-
-/* === Paragraphs === */
-p {
-  color: #d0d0d0;
+  font-weight: 600;
+  color: #f0f0f0;
+  text-shadow: 0 0 8px rgba(108, 170, 255, 0.6);
   margin-bottom: 1rem;
 }
 
-/* === Navigation (if any) === */
-nav {
-  padding: 1rem 0;
-  text-align: center;
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.04em;
 }
 
-nav a {
-  color: #bbb;
-  margin: 0 1rem;
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p, li {
+  font-weight: 300;
+  color: #c7c7c7;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* === Links === */
+a {
+  color: #6caaff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
-nav a:hover {
-  color: #fff;
+a:hover {
+  color: #a0c8ff;
 }
 
-/* === Buttons (optional) === */
+/* === Buttons === */
 button, .btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  padding: 0.6rem 1.4rem;
-  border-radius: 10px;
+  background: rgba(108, 170, 255, 0.15);
+  border: 1.8px solid #6caaff;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  color: #c7d9ff;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 10px rgba(108, 170, 255, 0.3);
 }
 
 button:hover, .btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background-color: #6caaff;
+  color: #0f141f;
+  box-shadow: 0 0 25px rgba(108, 170, 255, 0.7);
 }
 
 /* === Lists === */
 ul {
   list-style: none;
   padding-left: 0;
-  color: #ccc;
 }
 
 ul li {
-  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.85rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #c2c7d9;
 }
 
-/* === Links === */
-a {
-  color: #69bfff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6caaff;
+  font-size: 1.4rem;
+  line-height: 1;
 }
 
-a:hover {
-  color: #a1cfff;
+/* === Navigation (optional) === */
+nav {
+  padding: 1.5rem 0 3rem 0;
+  text-align: center;
 }
 
-/* === Specific Sections IDs Reset === */
-/* Remove any colored backgrounds from these IDs if defined elsewhere */
-#about,
-#projects,
-#experience,
-#certifications,
-#education,
-#publications {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 0 2.5rem 0 !important;
+nav a {
+  margin: 0 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #7aaeff;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover {
+  border-color: #a0c8ff;
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 2rem 1.5rem;
   }
 
   section,
@@ -144,7 +179,23 @@ a:hover {
   .experience-card,
   #certifications li,
   #publications li {
-    padding: 1.3rem 1.5rem;
-    margin-bottom: 1.8rem;
+    padding: 1.8rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p, li {
+    font-size: 1rem;
   }
 }
