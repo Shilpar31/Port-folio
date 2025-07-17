@@ -4,101 +4,92 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #0D0D2B, #1B1B3A); /* Space gradient */
-    color: #E0E0E0;
     background-attachment: fixed;
     background-size: cover;
+    color: #EAEAEA;
+}
+
+section {
+    padding: 60px 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.05); /* White transparent */
+    backdrop-filter: blur(15px); /* Glass effect */
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 16px 40px rgba(255, 255, 255, 0.1);
 }
 
 /* === NAVIGATION === */
 nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 15px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 nav ul {
     display: flex;
-    justify-content: right;
-    list-style-type: none;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: #fff;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #00FFFF;
 }
 
-/* === SECTION GENERAL STYLES === */
-section {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 60px 30px;
-    margin: 40px 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-}
-
+/* === HEADINGS === */
 section h2 {
-    font-size: 36px;
-    font-weight: 600;
-    color: #00FFF7;
-    margin-bottom: 40px;
     text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
-/* === ABOUT SECTION === */
+/* === ABOUT === */
 #about {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-}
-
-.about-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .about-left img {
     width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.about-right {
-    flex: 1;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
 }
 
 .about-right h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 20px;
     color: #00FFF7;
 }
 
-.about-right .typing-effect {
+.typing-effect {
     font-size: 20px;
     font-weight: 300;
     border-right: 2px solid #fff;
@@ -106,22 +97,21 @@ section h2 {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite, hide-cursor 1s 4s forwards;
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
     margin-bottom: 20px;
 }
 
-/* Keyframes for typing and blinking */
 @keyframes typing {
     to { width: 100%; }
 }
+
 @keyframes blink {
     50% { border-color: transparent; }
 }
 
 /* === BUTTONS === */
-.about-right .btn,
-.btn-certification {
-    background: #00ADB5;
+.btn, .btn-certification {
+    background: rgba(255, 255, 255, 0.15);
     color: white;
     padding: 12px 25px;
     border-radius: 30px;
@@ -129,37 +119,30 @@ section h2 {
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
+    margin-top: 20px;
 }
 
-.about-right .btn:hover,
-.btn-certification:hover {
+.btn:hover, .btn-certification:hover {
     background-color: #00fff2;
     color: #111;
     transform: scale(1.05);
     box-shadow: 0 0 15px #00fff2;
 }
 
-/* === SKILLS SECTION === */
+/* === SKILLS === */
 #skills {
-    background-color: transparent;
     overflow: hidden;
-    padding: 20px 0;
 }
 
 .skills-wrapper {
     display: flex;
     justify-content: center;
-    animation: marquee 15s linear infinite;
-}
-
-.skills {
-    display: flex;
-    align-items: center;
+    animation: marquee 20s linear infinite;
 }
 
 .skills img {
     width: 60px;
-    margin: 15px;
+    margin: 0 20px;
     transition: transform 0.3s;
 }
 
@@ -172,20 +155,6 @@ section h2 {
     100% { transform: translateX(-100%); }
 }
 
-/* === EDUCATION === */
-.education-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.education-item {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.05);
-}
-
 /* === PROJECTS === */
 .projects-container {
     display: flex;
@@ -195,16 +164,18 @@ section h2 {
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
     width: 300px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
 }
 
 .project-card img {
@@ -214,44 +185,28 @@ section h2 {
 }
 
 .project-card h3 {
-    font-size: 20px;
-    padding: 10px;
     color: #00FFF7;
+    padding: 10px;
 }
 
 .project-card p {
-    font-size: 14px;
-    padding: 0 15px 15px;
+    padding: 0 15px 20px;
+}
+
+/* === EDUCATION / EXPERIENCE CARDS === */
+.education-item, .experience-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
 }
 
 /* === EXPERIENCE === */
-#experience {
-    background-color: transparent;
-    color: #E0E0E0;
-    text-align: center;
-}
-
-.experience-container {
+#experience .experience-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.experience-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    padding: 25px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    flex-direction: column;
+    gap: 20px;
 }
 
 .experience-card h3 {
@@ -259,39 +214,25 @@ section h2 {
 }
 
 .experience-card h4 {
-    color: #FF00C8;
+    color: #FF66CC;
 }
 
 .experience-card ul {
-    text-align: left;
+    padding-left: 20px;
     margin-top: 10px;
 }
 
 /* === CERTIFICATIONS / PUBLICATIONS === */
 #certifications li, #publications li {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.04);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.05);
-}
-
-#certifications ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#certifications li b {
-    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 /* === VOLUNTEERING === */
-#volunteering {
-    margin-top: 40px;
-}
-
 #volunteering ul {
-    list-style-type: disc;
     padding-left: 20px;
 }
 
@@ -299,20 +240,19 @@ section h2 {
     margin-bottom: 15px;
 }
 
-/* === CONTACT SECTION === */
+/* === CONTACT === */
 #contact {
-    background-color: transparent;
     text-align: center;
 }
 
 #contact a {
-    margin: 15px;
+    margin: 0 15px;
 }
 
 .fa-brands, .fa-solid {
     font-size: 30px;
     color: #00FFF7;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .fa-brands:hover, .fa-solid:hover {
@@ -326,3 +266,9 @@ section h2 {
         align-items: center;
     }
 
+    .projects-container,
+    .skills-wrapper {
+        flex-direction: column;
+        animation: none;
+    }
+}
