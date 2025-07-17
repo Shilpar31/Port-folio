@@ -383,6 +383,11 @@ section h2 {
     /* glass style applied */
 }
 
+#certifications ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding-left: 0;        /* Removes default left padding */
+}
+
 #certifications li, #publications li {
     background: rgba(255, 255, 255, 0.85);
     padding: 15px;
