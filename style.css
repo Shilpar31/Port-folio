@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA; /* Very light gray background */
+    background-color: #000000; /* Black background */
     color: #34495E; /* Dark Gray text */
 }
 
@@ -13,15 +13,17 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
-    margin-bottom: 20px; /* Adding some space below navbar */
+    margin-bottom: 20px;
 }
 
 nav ul {
     display: flex;
     justify-content: right;
     list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
 }
 
 nav ul li {
@@ -35,32 +37,31 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #BDC3C7; /* Light gray hover effect */
+    color: #BDC3C7;
 }
 
 /* Section General Styles */
 section {
     padding: 60px 20px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for 3D look */
-    border-radius: 5px; /* Sharper corners */
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.12); /* white transparent glass effect */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff; /* White background for sections */
+    color: #eee; /* lighter text inside sections */
 }
 
 section:hover {
-    transform: translateY(-10px); /* Lift on hover */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.25);
 }
 
 /* About Section */
 #about {
-    background-color: #2c3e50; /* Deep Blue */
-    color: white;
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 5px; /* Sharper edges */
+    color: #eee;
 }
 
 .about-content {
@@ -76,29 +77,29 @@ section:hover {
 
 .about-right {
     flex: 1;
-    text-align: right; /* Align text to the right */
+    text-align: center;
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Align all items vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Ensure text is centered */
+    justify-content: center;
+    align-items: center;
 }
 
 .about-right h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    color:azure
+    color: #ffffff;
 }
 
 .about-right .typing-effect {
     font-size: 20px;
     font-weight: 300;
-    border-right: 2px solid #fff; /* Blinking cursor */
+    border-right: 2px solid #fff;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite, hide-cursor 1s 4s forwards; /* Control cursor hide */
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite, hide-cursor 1s 4s forwards;
     margin-bottom: 20px;
 }
 
@@ -115,60 +116,52 @@ section:hover {
 /* Keyframes for cursor blink */
 @keyframes blink {
     50% {
-        border-color: transparent; /* Blinking effect */
+        border-color: transparent;
     }
 }
 
-
 .about-right .btn {
-    background-color: #34495E; /* Dark Gray */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 30px;
     font-size: 16px;
     margin-top: 20px;
     display: inline-block;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .about-right .btn:hover {
-    background-color: #2C3E50; /* Deep Blue */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
 }
 
 /* Image styling */
 .about-left img {
     width: 250px;
-    border-radius: 5px; /* Sharper edges */
+    border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Typing effect */
-@keyframes typing {
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+    object-fit: cover;
 }
 
 /* Section Headings */
 section h2 {
     font-size: 36px;
     font-weight: 600;
-    color: #2C3E50; /* Deep Blue */
+    color: #fff;
     margin-bottom: 40px;
-    text-align: center; /* Centered heading */
+    text-align: center;
 }
 
 /* Education Section */
 #education {
-    background-color: #F4F4F4; /* Light Gray */
+    /* same glass effect */
 }
 
 .education-list {
@@ -178,10 +171,14 @@ section h2 {
 }
 
 .education-item {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #eee;
 }
 
 .education-item h3 {
@@ -191,9 +188,7 @@ section h2 {
 
 /* Skills Section */
 #skills {
-    background-color: #F4F4F4; /* Light Gray */
-    color: #34495E;
-    overflow: hidden; /* Hide content outside of the container */
+    overflow: hidden;
     padding: 20px 0;
 }
 
@@ -223,15 +218,16 @@ section h2 {
 /* Keyframes for marquee animation */
 @keyframes marquee {
     0% {
-        transform: translateX(100%); /* Start from the right */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%); /* End at the left */
+        transform: translateX(-100%);
     }
 }
+
 /* Projects Section */
 #projects {
-    background-color: #F4F4F4; /* Light Gray */
+    /* glass style applied */
 }
 
 .projects-container {
@@ -242,23 +238,28 @@ section h2 {
 }
 
 .project-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #eee;
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
 }
 
 .project-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 
 .project-card h3 {
@@ -273,21 +274,25 @@ section h2 {
 
 /* Certifications & Publications Section */
 #certifications, #publications {
-    background-color: #F4F4F4; /* Light Gray */
+    /* glass style applied */
 }
 
 #certifications li, #publications li {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 15px;
     margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #eee;
 }
 
 /* Contact Section */
 #contact {
-    background-color: #F4F4F4; /* Light Gray */
     text-align: center;
+    color: #eee;
 }
 
 #contact a {
@@ -322,38 +327,43 @@ section h2 {
         align-items: center;
     }
 }
+
 /* Button Styling */
 .about-right .btn {
-    background-color: #34495E; /* Dark Gray */
-    color: white;
-    text-decoration: none; /* Remove underline */
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-decoration: none;
     padding: 15px 30px;
-    border-radius: 30px; /* Rounded button */
+    border-radius: 30px;
     font-size: 16px;
     margin-top: 20px;
     display: inline-block;
-    text-align: center; /* Center text in the button */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s, transform 0.3s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .about-right .btn:hover {
-    background-color: #2C3E50; /* Dark Blue on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
 }
+
 /* Change size of Font Awesome icons */
 .fa-solid {
-    font-size: 30px; /* Adjust the size as needed */
+    font-size: 30px;
 }
 
 .fa-brands {
-    font-size: 30px; /* Adjust the size as needed */
+    font-size: 30px;
 }
 
 /* Button Style for Certificates */
 .btn-certification {
-    background-color: #34495E; /* Dark Gray */
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
     text-decoration: none;
     padding: 5px 13px;
@@ -362,17 +372,20 @@ section h2 {
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: 10px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-certification:hover {
-    background-color: #2C3E50; /* Slightly darker shade for hover effect */
-    transform: translateY(-5px); /* Adds a subtle 3D effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a nice shadow effect */
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-certification:active {
-    transform: translateY(2px); /* Simulates a button press */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Style for list items */
@@ -393,6 +406,7 @@ section h2 {
 #certifications a {
     text-decoration: none;
 }
+
 #volunteering {
     margin-top: 40px;
 }
