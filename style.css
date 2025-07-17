@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
-/* === Reset & Base === */
 *,
 *::before,
 *::after {
@@ -9,193 +8,154 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background:
-    radial-gradient(circle at center, #0f141f 0%, #05060a 90%);
-  color: #e5e5e5;
+  background: #0a0a0f;
+  color: #e6e8eb;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  line-height: 1.55;
-  overflow-x: hidden;
-}
-
-/* === Container === */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
-
-/* === Glass Panels === */
-section,
-.project-card,
-.education-item,
-.experience-card,
-#certifications li,
-#publications li {
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 8px 32px 0 rgba(0, 0, 0, 0.85),
-    inset 0 0 50px 5px rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  padding: 2.5rem 3rem;
-  margin-bottom: 3rem;
-  transition: box-shadow 0.4s ease, transform 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* subtle highlight shine effect on hover */
-section:hover,
-.project-card:hover,
-.experience-card:hover {
-  box-shadow:
-    0 15px 40px 0 rgba(0, 0, 0, 0.9),
-    inset 0 0 80px 10px rgba(255, 255, 255, 0.12);
-  transform: translateY(-8px);
-}
-
-/* === Typography === */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  color: #f0f0f0;
-  text-shadow: 0 0 8px rgba(108, 170, 255, 0.6);
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 3rem;
-  letter-spacing: 0.04em;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-p, li {
-  font-weight: 300;
-  color: #c7c7c7;
-  font-size: 1.125rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
-/* === Links === */
+/* subtle starry background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(255 255 255 / 0.02) 1px, transparent 1px),
+              radial-gradient(circle at center, rgba(255 255 255 / 0.015) 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+/* Container to center content */
+.container {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass effect sections */
+section {
+  background: rgba(255 255 255 / 0.06);
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(255 255 255 / 0.04);
+  border: 1px solid rgba(255 255 255 / 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* subtle lift on hover */
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(255 255 255 / 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #f5f7fa;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+/* Paragraphs and lists */
+p, li {
+  font-weight: 300;
+  font-size: 1.05rem;
+  color: #d0d3d6;
+  margin-bottom: 1rem;
+}
+
+/* Links */
 a {
-  color: #6caaff;
+  color: #8ab4f8;
   text-decoration: none;
-  transition: color 0.25s ease;
+  font-weight: 500;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.25s ease;
 }
 
 a:hover {
-  color: #a0c8ff;
+  border-color: #8ab4f8;
 }
 
-/* === Buttons === */
+/* Buttons */
 button, .btn {
-  background: rgba(108, 170, 255, 0.15);
-  border: 1.8px solid #6caaff;
-  padding: 0.7rem 1.8rem;
-  border-radius: 30px;
-  color: #c7d9ff;
+  background: rgba(255 255 255 / 0.1);
+  border: 1.8px solid #8ab4f8;
+  color: #e1e4f0;
   font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: 24px;
   cursor: pointer;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 0 10px rgba(108, 170, 255, 0.3);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 button:hover, .btn:hover {
-  background-color: #6caaff;
-  color: #0f141f;
-  box-shadow: 0 0 25px rgba(108, 170, 255, 0.7);
+  background: #8ab4f8;
+  color: #0a0a0f;
+  border-color: #8ab4f8;
 }
 
-/* === Lists === */
+/* Lists */
 ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
   padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: 0.85rem;
-  font-weight: 300;
-  font-size: 1.1rem;
-  color: #c2c7d9;
+  list-style: none;
 }
 
 ul li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #6caaff;
-  font-size: 1.4rem;
-  line-height: 1;
-}
-
-/* === Navigation (optional) === */
-nav {
-  padding: 1.5rem 0 3rem 0;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 1.5rem;
+  content: "•";
+  color: #8ab4f8;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
   font-weight: 600;
-  font-size: 1.05rem;
-  color: #7aaeff;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 4px;
-  transition: border-color 0.3s ease;
+  font-size: 1.3rem;
+  line-height: 0;
 }
 
-nav a:hover {
-  border-color: #a0c8ff;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 600px) {
   .container {
-    padding: 2rem 1.5rem;
+    padding: 0 1rem;
+    margin: 2rem auto;
   }
 
-  section,
-  .project-card,
-  .education-item,
-  .experience-card,
-  #certifications li,
-  #publications li {
-    padding: 1.8rem 2rem;
-    margin-bottom: 2.5rem;
+  section {
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   h3 {
-    font-size: 1.3rem;
-  }
-
-  p, li {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
