@@ -244,12 +244,13 @@ section h2 {
     }
 }
 
-/* experience section*/
+/* Experience Section */
 .experience-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .experience-card {
@@ -257,8 +258,8 @@ section h2 {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  width: 300px;
-  padding: 15px 20px;
+  width: 420px; /* Increased width for better content fit */
+  padding: 20px 25px;
   color: #34495E;
   transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   display: flex;
@@ -278,7 +279,7 @@ section h2 {
   align-items: center;
   font-size: 15px;
   font-weight: 500;
-  color: #1A237E;
+  color: #000000; /* Changed to black */
   margin-bottom: 5px;
 }
 
