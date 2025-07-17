@@ -1,274 +1,150 @@
-/* === GLOBAL STYLES === */
+/* === Global and Reset === */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #0D0D2B, #1B1B3A); /* Space gradient */
-    background-attachment: fixed;
-    background-size: cover;
-    color: #EAEAEA;
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(ellipse at center, #0a0a23 0%, #000000 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-section {
-    padding: 60px 30px;
-    margin: 0 auto;
-    max-width: 1100px;
-    background: rgba(255, 255, 255, 0.05); /* White transparent */
-    backdrop-filter: blur(15px); /* Glass effect */
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
-    margin-bottom: 40px;
-    transition: all 0.3s ease;
+/* === Container === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-section:hover {
-    box-shadow: 0 16px 40px rgba(255, 255, 255, 0.1);
+/* === Glassmorphism Base for All Sections and Cards === */
+section,
+.project-card,
+.education-item,
+.experience-card,
+#certifications li,
+#publications li {
+  background: rgba(255, 255, 255, 0.06);         /* Transparent white */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* === NAVIGATION === */
+/* Hover effect for cards and sections */
+section:hover,
+.project-card:hover,
+.experience-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+/* === Headings === */
+h1, h2, h3, h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* === Paragraphs === */
+p {
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+}
+
+/* === Navigation (if any) === */
 nav {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0;
+  text-align: center;
 }
 
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+nav a {
+  color: #bbb;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-nav ul li {
-    margin-left: 20px;
+nav a:hover {
+  color: #fff;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* === Buttons (optional) === */
+button, .btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #00FFFF;
+button:hover, .btn:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-/* === HEADINGS === */
-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 40px;
+/* === Lists === */
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: #ccc;
 }
 
-/* === ABOUT === */
-#about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    gap: 40px;
+ul li {
+  margin-bottom: 0.8rem;
 }
 
-.about-left img {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+/* === Links === */
+a {
+  color: #69bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.about-right h2 {
-    color: #00FFF7;
+a:hover {
+  color: #a1cfff;
 }
 
-.typing-effect {
-    font-size: 20px;
-    font-weight: 300;
-    border-right: 2px solid #fff;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
-    margin-bottom: 20px;
+/* === Specific Sections IDs Reset === */
+/* Remove any colored backgrounds from these IDs if defined elsewhere */
+#about,
+#projects,
+#experience,
+#certifications,
+#education,
+#publications {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 2.5rem 0 !important;
 }
 
-@keyframes typing {
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-/* === BUTTONS === */
-.btn, .btn-certification {
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.btn:hover, .btn-certification:hover {
-    background-color: #00fff2;
-    color: #111;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00fff2;
-}
-
-/* === SKILLS === */
-#skills {
-    overflow: hidden;
-}
-
-.skills-wrapper {
-    display: flex;
-    justify-content: center;
-    animation: marquee 20s linear infinite;
-}
-
-.skills img {
-    width: 60px;
-    margin: 0 20px;
-    transition: transform 0.3s;
-}
-
-.skills img:hover {
-    transform: scale(1.2);
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-/* === PROJECTS === */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    color: #00FFF7;
-    padding: 10px;
-}
-
-.project-card p {
-    padding: 0 15px 20px;
-}
-
-/* === EDUCATION / EXPERIENCE CARDS === */
-.education-item, .experience-card {
-    background: rgba(255, 255, 255, 0.04);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
-}
-
-/* === EXPERIENCE === */
-#experience .experience-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.experience-card h3 {
-    color: #00FFF7;
-}
-
-.experience-card h4 {
-    color: #FF66CC;
-}
-
-.experience-card ul {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-/* === CERTIFICATIONS / PUBLICATIONS === */
-#certifications li, #publications li {
-    background-color: rgba(255, 255, 255, 0.04);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-}
-
-/* === VOLUNTEERING === */
-#volunteering ul {
-    padding-left: 20px;
-}
-
-#volunteering li {
-    margin-bottom: 15px;
-}
-
-/* === CONTACT === */
-#contact {
-    text-align: center;
-}
-
-#contact a {
-    margin: 0 15px;
-}
-
-.fa-brands, .fa-solid {
-    font-size: 30px;
-    color: #00FFF7;
-    transition: color 0.3s ease;
-}
-
-.fa-brands:hover, .fa-solid:hover {
-    color: #FF00C8;
-}
-
-/* === RESPONSIVE === */
+/* === Responsive === */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .container {
+    padding: 1rem;
+  }
 
-    .projects-container,
-    .skills-wrapper {
-        flex-direction: column;
-        animation: none;
-    }
+  section,
+  .project-card,
+  .education-item,
+  .experience-card,
+  #certifications li,
+  #publications li {
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1.8rem;
+  }
 }
