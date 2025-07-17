@@ -9,18 +9,18 @@ body {
 
 /* Navbar */
 nav {
-    background-color: #34495E; /* Same as body background */
+    background-color: #ffffff; /* Match body background */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Softer shadow for light navbar */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     padding: 15px 0;
     margin-bottom: 20px;
 }
 
 nav ul {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     list-style-type: none;
     margin: 0;
     padding: 0 20px;
@@ -31,16 +31,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #34495E; /* Match general text color */
+    color: #34495E; /* General text color */
     text-decoration: none;
     font-size: 20px;
-    font-weight:Bold;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #1A237E; /* Subtle dark blue hover effect */
-    text-shadow: 0 1px 3px rgba(26, 35, 126, 0.2); /* Soft hover glow */
+    color: #1A237E; /* Slightly darker blue on hover */
+    text-shadow: 0 1px 3px rgba(26, 35, 126, 0.2); /* Soft glow on hover */
 }
 
 
