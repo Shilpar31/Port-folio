@@ -9,7 +9,7 @@ body {
 
 /* Navbar */
 nav {
-    background-color: #0D123B; /* More darker navy blue */
+    background-color: #ffffff; /* More darker navy blue */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,7 +51,7 @@ section {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    color: #34495E; /* dark text inside sections */
+    color: #0f061f; /* dark text inside sections */
 }
 
 /* Hover effect: reduce transparency a little and enhance shadow slightly */
@@ -101,7 +101,7 @@ section:hover {
 
 .about-right {
     text-align: justify;
-    color: #34495E;
+    color: #000033;
     font-size: 1rem;
     line-height: 1.6;
     width: 100%;
