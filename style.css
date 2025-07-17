@@ -189,6 +189,7 @@ section h2 {
   text-align: center;
 }
 
+/* Centered image */
 .education-image-center img {
   max-width: 200px;
   height: auto;
@@ -196,20 +197,21 @@ section h2 {
   display: block;
 }
 
-/* Single Education Card */
+/* Full-width education card */
 .education-card {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #34495E;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
   text-align: left;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .education-card:hover {
@@ -219,26 +221,21 @@ section h2 {
 
 .education-card h3 {
   margin: 0 0 10px;
-  font-size: 22px;
+  font-size: 24px;
   color: #1A237E;
 }
 
 .education-card h4 {
-  margin-top: 0;
+  margin: 0 0 10px;
   font-size: 18px;
   color: #34495E;
 }
 
 .education-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
-  margin: 5px 0;
-}
-
-.edu-summary {
-  margin-top: 15px;
-  font-style: italic;
-  color: #555;
+  margin: 8px 0;
+  color: #000000; /* Normal black text */
 }
 
 
