@@ -50,14 +50,31 @@ section {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     color: #eee; /* lighter text inside sections */
 }
 
+/* Hover effect: reduce transparency a little and enhance shadow slightly */
 section:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.18); /* slightly less transparent */
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
+    /* Removed translateY for no lifting */
 }
+
+/* Section Divider - thick line fading from center out */
+.section-divider {
+    width: 100%;
+    height: 4px; /* thickness */
+    margin: 40px auto 0; /* spacing above */
+    background: linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0) 0%,       /* transparent start */
+        rgba(30, 30, 30, 0.8) 50%,    /* dark center */
+        rgba(30, 30, 30, 0) 100%      /* transparent end */
+    );
+    border: none;
+}
+
 
 
 /* About Section */
