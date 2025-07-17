@@ -77,8 +77,8 @@ section:hover {
 }
 
 .about-left img {
-    width: 80px;            /* coin size */
-    height: 80px;
+    width: 110px;            /* coin size */
+    height: 110px;
     border-radius: 50%;     /* circular */
     object-fit: cover;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
