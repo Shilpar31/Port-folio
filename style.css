@@ -3,13 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Black background */
+    background-color: #ffffff; /* White background */
     color: #34495E; /* Dark Gray text */
 }
 
 /* Navbar */
 nav {
-    background-color: #2C3E50; /* Deep Blue */
+    background-color: #1A237E; /* Dark Navy Blue */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,20 +45,19 @@ section {
     padding: 60px 20px;
     margin-bottom: 40px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.12); /* white transparent glass effect */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(255, 255, 255, 0.85); /* almost solid white glass */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); /* subtle shadow */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    color: #eee; /* lighter text inside sections */
+    color: #34495E; /* dark text inside sections */
 }
 
 /* Hover effect: reduce transparency a little and enhance shadow slightly */
 section:hover {
-    background: rgba(255, 255, 255, 0.18); /* slightly less transparent */
-    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
-    /* Removed translateY for no lifting */
+    background: rgba(255, 255, 255, 0.95); /* more solid on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Divider - thick line fading from center out */
@@ -75,11 +74,9 @@ section:hover {
     border: none;
 }
 
-
-
 /* About Section */
 #about {
-    color: #eee;
+    color: #34495E;
 }
 
 .about-content {
@@ -98,13 +95,13 @@ section:hover {
     height: 110px;
     border-radius: 50%;     /* circular */
     object-fit: cover;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     display: block;
 }
 
 .about-right {
     text-align: justify;
-    color: #eee;
+    color: #34495E;
     font-size: 1rem;
     line-height: 1.6;
     width: 100%;
@@ -115,13 +112,13 @@ section:hover {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #1A237E; /* dark navy blue */
 }
 
 .about-right .typing-effect {
     font-size: 20px;
     font-weight: 300;
-    border-right: 2px solid #fff;
+    border-right: 2px solid #1A237E;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -148,7 +145,7 @@ section:hover {
 }
 
 .about-right .btn {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #1A237E; /* dark navy blue */
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -156,25 +153,23 @@ section:hover {
     font-size: 16px;
     margin-top: 20px;
     display: inline-block;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.5);
     transition: background-color 0.3s, transform 0.3s;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #0d145f;
 }
 
 .about-right .btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #141a59;
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(20, 26, 89, 0.7);
 }
-
 
 /* Section Headings */
 section h2 {
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
+    color: #1A237E;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -191,14 +186,14 @@ section h2 {
 }
 
 .education-item {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.85);
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #eee;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #34495E;
 }
 
 .education-item h3 {
@@ -258,21 +253,21 @@ section h2 {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #eee;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #34495E;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -298,144 +293,9 @@ section h2 {
 }
 
 #certifications li, #publications li {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.85);
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 10px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #eee;
-}
-
-/* Contact Section */
-#contact {
-    text-align: center;
-    color: #eee;
-}
-
-#contact a {
-    margin: 15px;
-}
-
-#contact img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Scroll animations */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-left, .about-right {
-        width: 100%;
-    }
-
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Button Styling */
-.about-right .btn {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    margin-top: 20px;
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.about-right .btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
-}
-
-/* Change size of Font Awesome icons */
-.fa-solid {
-    font-size: 30px;
-}
-
-.fa-brands {
-    font-size: 30px;
-}
-
-/* Button Style for Certificates */
-.btn-certification {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
-    text-decoration: none;
-    padding: 5px 13px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 10px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.btn-certification:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-}
-
-.btn-certification:active {
-    transform: translateY(2px);
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Style for list items */
-#certifications ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#certifications li {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-#certifications li b {
-    font-weight: bold;
-}
-
-#certifications a {
-    text-decoration: none;
-}
-
-#volunteering {
-    margin-top: 40px;
-}
-
-#volunteering ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#volunteering li {
-    margin-bottom: 15px;
-}
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop
