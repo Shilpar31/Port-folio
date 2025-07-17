@@ -9,7 +9,7 @@ body {
 
 /* Navbar */
 nav {
-    background-color: #1A237E; /* Dark Navy Blue */
+    background-color: #0D123B; /* More darker navy blue */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -67,9 +67,9 @@ section:hover {
     margin: 40px auto 0; /* spacing above */
     background: linear-gradient(
         to right,
-        rgba(30, 30, 30, 0) 0%,       /* transparent start */
-        rgba(30, 30, 30, 0.8) 50%,    /* dark center */
-        rgba(30, 30, 30, 0) 100%      /* transparent end */
+        rgba(13, 18, 59, 0) 0%,       /* transparent start */
+        rgba(13, 18, 59, 0.8) 50%,    /* dark center */
+        rgba(13, 18, 59, 0) 100%      /* transparent end */
     );
     border: none;
 }
@@ -112,13 +112,13 @@ section:hover {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1A237E; /* dark navy blue */
+    color: #0D123B; /* more darker navy blue */
 }
 
 .about-right .typing-effect {
     font-size: 20px;
     font-weight: 300;
-    border-right: 2px solid #1A237E;
+    border-right: 2px solid #0D123B;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -145,7 +145,7 @@ section:hover {
 }
 
 .about-right .btn {
-    background-color: #1A237E; /* dark navy blue */
+    background-color: #0D123B; /* more darker navy blue */
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -154,13 +154,13 @@ section:hover {
     margin-top: 20px;
     display: inline-block;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.5);
+    box-shadow: 0 5px 15px rgba(13, 18, 59, 0.5);
     transition: background-color 0.3s, transform 0.3s;
-    border: 1px solid #0d145f;
+    border: 1px solid #0a0e2a;
 }
 
 .about-right .btn:hover {
-    background-color: #141a59;
+    background-color: #141a59; /* original hover darker navy */
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(20, 26, 89, 0.7);
 }
@@ -169,7 +169,7 @@ section:hover {
 section h2 {
     font-size: 36px;
     font-weight: 600;
-    color: #1A237E;
+    color: #0D123B; /* more darker navy blue */
     margin-bottom: 40px;
     text-align: center;
 }
@@ -298,4 +298,5 @@ section h2 {
     border-radius: 15px;
     margin-bottom: 10px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    backdrop
+    backdrop-filter: blur(10px);
+    -webkit-backdrop
