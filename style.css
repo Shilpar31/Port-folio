@@ -9,7 +9,7 @@ body {
 
 /* Navbar */
 nav {
-    background-color: #ffffff; /* Match body background */
+    background-color: #f7f7f7; /* Match body background */
     position: sticky;
     top: 0;
     z-index: 1000;
