@@ -200,6 +200,13 @@ section h2 {
     color: #34495E;
 }
 
+.education-image-center img {
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 30px;
+  display: block;
+}
+
 .education-item h3 {
     margin: 0;
     font-size: 20px;
