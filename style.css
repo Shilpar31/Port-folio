@@ -183,21 +183,10 @@ section h2 {
     /* same glass effect */
 }
 
-.education-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.education-item {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #34495E;
+/* Education Section */
+#education {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .education-image-center img {
@@ -207,10 +196,51 @@ section h2 {
   display: block;
 }
 
-.education-item h3 {
-    margin: 0;
-    font-size: 20px;
+/* Single Education Card */
+.education-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #34495E;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.education-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #1A237E;
+}
+
+.education-card h4 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #34495E;
+}
+
+.education-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.edu-summary {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+}
+
 
 /* Skills Section */
 #skills {
