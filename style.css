@@ -383,16 +383,82 @@ section h2 {
     /* glass style applied */
 }
 
-#certifications ul {
-  list-style-type: none; /* Removes the bullet points */
-  padding-left: 0;        /* Removes default left padding */
+/* Certifications and Publications Sections */
+
+/* Remove bullet points and reset padding/margin */
+#certifications ul,
+#publications ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-#certifications li, #publications li {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop
+/* Style for each list item */
+#certifications li,
+#publications li {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #34495E;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Style the links inside Certifications */
+#certifications a.btn-certification {
+  color: #1A237E;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#certifications a.btn-certification:hover {
+  color: #34495E;
+  text-decoration: underline;
+}
+/* Volunteering Section */
+
+#volunteering ul {
+  list-style-type: none;   /* Remove bullet points */
+  padding-left: 0;
+  margin: 0;
+  display: flex;           /* Arrange items in a row */
+  gap: 20px;               /* Space between cards */
+  flex-wrap: wrap;         /* Wrap on smaller screens */
+  justify-content: center; /* Center align the row */
+}
+
+#volunteering li {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #34495E;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1 1 300px;          /* Flexible width, min 300px */
+  max-width: 350px;          /* Max width of each card */
+}
+
+/* Links inside volunteering */
+#volunteering a {
+  color: #1A237E;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#volunteering a:hover {
+  color: #34495E;
+  text-decoration: underline;
+}
+
+    
